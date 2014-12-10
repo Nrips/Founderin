@@ -1,0 +1,42 @@
+//
+//  Founderin-Prefix.pch
+//  Founderin
+//
+//  Created by Neuron on 12/6/14.
+//  Copyright (c) 2014 Neuron. All rights reserved.
+//
+
+#define Founderin_Founderin_Prefix_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#ifdef __OBJC__
+
+#import <FacebookSDK/FacebookSDK.h>
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import "Constants.h"
+#import "AFNetworking.h"
+#import "Utility.h"
+#import "AppSharedData.h"
+#import "AppDelegate.h"
+#import "ServiceManager.h"
+#import "AFNetworkActivityIndicatorManager.h"
+#import "MySingleton.h"
+#import "JSONKit.h"
+#import "OAConsumer.h"
+#import "OAMutableURLRequest.h"
+#import "OADataFetcher.h"
+#import "OATokenManager.h"
+#import "MBProgressHUD.h"
+#import "UIImageView+WebCache.h"
+#import <MapKit/MapKit.h>
+#import <CoreLocation/CoreLocation.h>
+
+#define serviceManager [ServiceManager sharedManager]
+#define appDelegate (AppDelegate*)[[UIApplication sharedApplication] delegate]
+#define appSharedData [AppSharedData sharedInstance]
+#define userDefaults [NSUserDefaults standardUserDefaults]
+
+#endif
